@@ -1,0 +1,27 @@
+{
+  "name": "victoria-harbour-voxel",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:single": "npm run build && node tools/build-single.mjs",
+    "preview": "vite preview",
+    "verify": "node scripts/verify-geo.mjs",
+    "verify:city": "node scripts/verify-city.mjs",
+    "verify:landmarks": "node scripts/verify-landmarks.mjs",
+    "verify:fx": "node scripts/verify-fx.mjs",
+    "verify:architecture": "node scripts/verify-architecture.mjs",
+    "verify:all": "npm run verify && npm run verify:city && npm run verify:landmarks && npm run verify:fx && npm run verify:architecture",
+    "lint:specs": "node tools/spec-lint.mjs",
+    "shoot": "node tools/shoot.mjs"
+  },
+  "dependencies": {
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.13.0",
+    "vite": "^5.4.0"
+  }
+}
